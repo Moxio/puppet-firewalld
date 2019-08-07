@@ -39,6 +39,12 @@ describe Puppet::Type.type(:firewalld_ipset) do
         type: 'hash:net'
       ) end.to_not raise_error
     end
+    it 'accept . in name' do
+      expect do described_class.new(
+        name: 'white.blue',
+        type: 'hash:net'
+      ) end.to_not raise_error
+    end
   end
 
 
