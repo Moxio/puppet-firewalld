@@ -1,3 +1,4 @@
+require 'puppet/parameter/boolean'
 require_relative '../../puppet_x/firewalld/property/positive_integer'
 
 Puppet::Type.newtype(:firewalld_ipset) do
